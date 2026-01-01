@@ -1,0 +1,364 @@
+<!doctype html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>道門陣營｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+   background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.camp-hero {
+  position: relative;
+  height: 70vh;
+	
+  background-image: url("邪/c99d352b957369233181f3e09d2f9048.jpg");
+  background-size: cover;
+
+  background-position: center 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  animation: heroFade 1.8s ease forwards;
+}
+
+.camp-hero h1 {
+  position: relative;
+  color: #fff;
+  font-size: 64px;
+  letter-spacing: 10px;
+  z-index: 1;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleFade 1.2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.camp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+	
+.section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-left: 6px solid 			#AE0000;
+  padding-left: 12px;
+}
+
+.section p {
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.character-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.character-img {
+  height: 240px;
+  background: #ddd;
+}
+
+.character-info {
+  padding: 20px;
+}
+
+.character-info h3 {
+  margin: 0 0 10px;
+}
+
+.character-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.character-img {
+    width: 100%;       
+    height: 250px;     
+    overflow: hidden; 
+}
+
+.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+	.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; 
+}
+	.character-img {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.poem {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+}
+
+
+.character-card:hover .poem {
+  opacity: 1;
+  transform: translateY(0);
+}
+	@keyframes heroFade {
+  to { opacity: 1; }
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  z-index: 999;
+  transition: 0.3s;
+}
+
+#music-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+ 
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+ 
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+ 
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+  
+ <audio id="bgm" loop>
+  <source src="AudioCleaner_Download_霹靂英雄精選 _ 舊曲 _ - 棄天帝氣勢曲.mp3" type="audio/mpeg">
+</audio>
+
+
+  
+  <div class="navbar">
+    ...
+  </div>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="camp-hero">
+  <h1>邪 道</h1>
+</div>
+	
+<div id="music-btn">🔇 點我播放音樂</div>
+<script>
+  const bgm = document.getElementById("bgm");
+  const musicBtn = document.getElementById("music-btn");
+
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", function () {
+    if (!isPlaying) {
+      bgm.volume = 0.4;
+      bgm.play().then(() => {
+        musicBtn.textContent = "🔊 音樂播放中";
+        isPlaying = true;
+      }).catch(err => {
+        console.log("播放失敗：", err);
+      });
+    } else {
+      bgm.pause();
+      musicBtn.textContent = "🔇 點我播放音樂";
+      isPlaying = false;
+    }
+  });
+</script>
+	
+
+<div class="section">
+  <h2>陣營理念</h2>
+  <p>
+  原生魔族信仰純粹，非魔族信仰者全殺，阻礙魔族鴻圖大業者亦殺，非同族者全殺。<br/>惡人則是後天成魔，在私慾與惡性影響下而禍亂天下。
+	
+  </p>
+</div>
+
+
+<div class="section">
+  <h2>代表人物</h2>
+
+  <div class="character-list">
+    <div class="character-card">
+      <div class="character-img">
+        
+        <img src="邪/pw01077.jpg" alt="棄天帝">
+	 <div class="poem">
+  人間！又污穢了
+	
+  </div>
+      </div>
+      <div class="character-info">
+        <h3>棄天帝</h3>
+        <p>異度魔界的創始魔皇，毀滅之神，有著睥睨人世間的威嚴，藉聖魔元胎與神柱之能量，再臨人間苦境。無感無情，孤高自許，厭惡凡人的爭權奪利和自相殘殺，欲血洗神州大地。
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+     <div class="character-img">
+  <img src="邪/pw01607_八歧邪神.jpg" alt="八歧邪神">
+		 	 <div class="poem">
+八旗邪神，現世為禍<br/>萬魔歸位，滅世降臨
+  </div>
+</div>
+      <div class="character-info">
+        <h3>八歧邪神</h3>
+        <p>厄禍之始，萬惡之初。百妖卷中最恐怖的邪神，體內擁有七條魂魄，據說是由人類與生物龐大的怨念所造就，本身並無生命的存在，而是一種完全黑暗能量的呈現，帶來戰火與毀滅，擁有不死邪力。過去曾被九天玄尊率屠龍八劍士所敗，多年後突破示流島封印，降臨人間，再度席捲神州大地。
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <div class="character-img">
+	  <img src="邪/29fabbfe0e8ecaf7e660eea0d3390391.jpg" alt="燹王">
+	<div class="poem">
+滾滾龍爭虎鬥，世態雲變俱往。
+<br/>笑談蒼茫大地，誰主沈浮？
+<br/>腥浪淘盡英雄，不負今朝。
+  </div>
+</div>
+      <div class="character-info">
+        <h3>燹王</h3>
+        <p>彩綠險磡之主，開天六王之一，雖以燹為名，但極重個人原則與品味，沉穩內斂、狂傲不羈，乃六王之中唯一與閻王知交的好友。彩綠險磡之人，皆是由燹王所命名，名字背後都代表一條定律。有別於其他霸主，燹王以自己的幽默方式與部屬相處，深獲民心，對愛情也相當專一，為難得一見的一方霸主。
+</p>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

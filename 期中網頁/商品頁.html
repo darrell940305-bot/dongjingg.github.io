@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>商品頁｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.hero {
+  height: 50vh;
+  background: linear-gradient(135deg, #222, #555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 48px;
+}
+
+	
+
+.category-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.category-card {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card .category-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background:	#5B00AE;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  padding: 12px 0;
+  letter-spacing: 2px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>霹靂收藏館</h1>
+</div>
+
+<style>
+.hero {
+  height: 50vh;
+
+ 
+  background-image: url("商品/霹靂葉小釵.png"); 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero h1 {
+  position: relative; 
+  font-size: 48px;
+  z-index: 1;
+}
+</style>
+
+<div class="category-section">
+
+  <a href="戲偶頁.html" class="category-card">
+    <img src="商品/年幾何.jpg" alt="戲偶">
+    <div class="category-name">戲偶</div>
+  </a>
+
+  <a href="兵器頁.html" class="category-card">
+    <img src="商品/玉鈴杖.jpg" alt="偶用武器">
+    <div class="category-name">偶用武器</div>
+  </a>
+
+  <a href="周邊頁.html" class="category-card">
+    <img src="商品/炫彩收藏票卡.jpg" alt="周邊">
+    <div class="category-name">周邊</div>
+  </a>
+
+  <a href="聯名頁.html" class="category-card">
+    <img src="商品/蝶龍之亂花信風.jpg" alt="聯名">
+    <div class="category-name">聯名</div>
+  </a>
+
+</div>
+
+</div>
+
+</body>
+</html>

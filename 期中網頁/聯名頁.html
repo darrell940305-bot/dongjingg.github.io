@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>霹靂收藏館｜戲偶｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.hero {
+  height: 40vh;
+  background-image: url("商品/主視覺.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+}
+.hero h1 {
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.product-nav {
+  position: sticky;
+  top: 80px; 
+  background: rgba(91,0,174,0.95);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  z-index: 50;
+}
+.product-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.product-nav a:hover {
+  background: #7C2FF7;
+}
+
+
+.product-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px auto;
+}
+
+.product-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  border-left: 6px solid #5B00AE;
+  padding-left: 12px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+.product-card img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #5B00AE;
+}
+.product-info .poem {
+  font-style: italic;
+  color: #7C2FF7;
+  margin: 6px 0;
+}
+.product-info .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  margin: 6px 0;
+}
+.product-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.product-section {
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 768px) {
+.product-card {
+    flex-direction: column;
+  }
+
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+ 
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+	
+  .product-nav {
+    display: none;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>周邊好禮</h1>
+</div>
+
+
+<div class="product-nav">
+  <a href="#premium">物外鋼珠筆</a>
+  <a href="#story">EDIFIER耳機</a>
+  <a href="#palm">Chord & Major 調性耳機</a>
+  <a href="#others">GAME’NIR電玩酒吧</a>
+</div>
+
+
+<div class="product-section" id="premium">
+  <h2>物外鋼珠筆</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/聯名鋼珠筆.jpg" alt="聯名鋼珠筆">
+      <div class="product-info">
+        <h3>『素還真聯名鋼珠筆』經典收藏套組(龍騰紫)</h3>
+        <div class="poem">「初心難忘，深藏於心，台灣文具品牌 物外，與 霹靂 本次攜手合作，推出極具收藏價值的『素還真聯名鋼珠筆－經典收藏套組』全球限定430組數量製作，雕刻專屬編號，完美呈現珍藏之價值。」</div>
+        <div class="price">NT$3,800</div>
+        <p>
+商品材質/黃銅、紙、實木<br/>
+商品規格/典藏盒 258x197x60mm<br/>
+包裝規格/約25.8x19.5x2.5cm<br/>
+商品重量/約620g(含包裝)
+		  </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="商品/素還真聯名鋼珠筆.jpg" alt="素還真聯名鋼珠筆">
+      <div class="product-info">
+        <h3>『素還真聯名鋼珠筆』經典收藏套組(清香白)</h3>
+        <div class="poem">「初心難忘，深藏於心，台灣文具品牌 物外，與 霹靂 本次攜手合作，推出極具收藏價值的『素還真聯名鋼珠筆－經典收藏套組』全球限定430組數量製作，雕刻專屬編號，完美呈現珍藏之價值。」</div>
+        <div class="price">NT$3,800</div>
+        <p>
+商品材質/黃銅、紙、實木<br/>
+商品規格/典藏盒 258x197x60mm<br/>
+包裝規格/約25.8x19.5x2.5cm<br/>
+商品重量/約620g(含包裝)</p>
+      </div>
+    </div>
+</div>
+
+<div class="product-section" id="story">
+  <h2>EDIFIER耳機</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/葉小釵聯名耳機(白色).jpg" alt="葉小釵聯名耳機(白色)">
+      <div class="product-info">
+        <h3>EDIFIER X PILI葉小釵聯名耳機(白色)</h3>
+        <div class="poem">「簡單操作低延遲。」</div>
+        <div class="price">NT$1,999</div>
+        <p>
+包裝⽅式/鐵盒<br/>
+內容物/耳機充電盒（葉⼩釵家徽版）、葉⼩釵⼈物年曆、名神劍吊飾（聯名限定⾦銀版）、充電線、說明書
+</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/葉小釵聯名耳機.jpg" alt="葉小釵聯名耳機">
+      <div class="product-info">
+        <h3>EDIFIER X PILI葉小釵聯名耳機(黑色)</h3>
+
+        <div class="poem">「簡單操作低延遲。」</div>
+        <div class="price">NT$1,999</div>
+        <p>
+包裝方式/鐵盒<br/>
+內容物/耳機充電盒（葉⼩釵家徽版）、葉⼩釵⼈物年曆、名神劍吊飾（聯名限定⾦銀版）、充電線、說明書</p>
+      </div>
+  </div>
+	  
+<div class="product-section" id="palm">
+  <h2>Chord & Major 調性耳機</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/蝶龍之亂阿修羅主宰.jpg" alt="蝶龍之亂阿修羅主宰">
+      <div class="product-info">
+        <h3>霹靂英雄戰紀聯名款耳機-蝶龍之亂阿修羅主宰</h3>
+        <div class="poem">「「魔因神話 阿修羅主宰」｜魂墮玄夢，千翼無用。一羽化變，萬法皆空。」</div>
+        <div class="price">NT$2,380</div>
+        <p>
+角色圖騰以阿修羅主宰「鬼面具」結合「鬼角」融合而成。<br/>
+以紅、金搭配體現魔王的尊貴氣勢與瀟灑行事風格。<br/>
+適合聆聽古典樂奏鳴曲、交響樂、國樂等以器樂演奏為主的音樂。<br/>
+適合喜歡聆聽角色曲配樂的朋友。<br/>
+</p>
+      </div>
+    </div>
+	  <div class="product-card">
+      <img src="商品/蝶龍之亂花信風.jpg" alt="蝶龍之亂花信風">
+      <div class="product-info">
+        <h3>霹靂英雄戰紀聯名款耳機-蝶龍之亂花信風</h3>
+        <div class="poem">「「二十四番 花信風」｜銀雪夜催花，風令已眠淺，誰醒江山詞？一甌茶煙對夢閒。」</div>
+        <div class="price">NT$2,380</div>
+        <p>
+角色圖騰以後背刺青「骷顱頭」及「彼岸花」為意象，<br/>
+展現花信風在紛飛白雪中露著上身巧妙運刀的英姿。<br/>
+不論是口白或劇中的武打聲音特效，前後遠近、層次分明。<br/>
+適合喜歡聆聽多元曲風的朋友。
+</p>
+      </div>
+  </div>
+</div>
+
+<div class="product-section" id="others">
+  <h2>GAME’NIR電玩酒吧</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/特務箱手把.jpg" alt="特務箱手把">
+      <div class="product-info">
+        <h3>霹靂英雄xGAME’NIR特務箱手把組金銀雙秀聯名款</h3>
+        <div class="poem">「霹靂在發展至今數十年的歲月裡，滿足了不只一代人的念想。現在，在遊戲世界裡，你也可以找到霹靂的陪伴。」</div>
+        <div class="price">NT$2,990</div>
+        <p>
+● 金款-倦收天紀念手把*1  銀款-原無鄉紀念手把*1<br/>
+● 金款-天鞘晨曦-鑰匙圈   銀款-銀驃玄解-鑰匙圈<br/>
+● 金銀雙秀滑鼠墊/保護墊<br/>
+● 霹靂布袋戲鋁合金特務箱*1<br/>
+</p>
+      
+    </div>
+	  
+</div>
+
+</body>
+</html>
+
+

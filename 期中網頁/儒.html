@@ -1,0 +1,367 @@
+<!doctype html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>道門陣營｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+   background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.camp-hero {
+  position: relative;
+  height: 70vh;
+	
+  background-image: url("儒/pw00457.jpg");
+  background-size: cover;
+
+  background-position: center 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  animation: heroFade 1.8s ease forwards;
+}
+
+.camp-hero h1 {
+  position: relative;
+  color: #fff;
+  font-size: 64px;
+  letter-spacing: 10px;
+  z-index: 1;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleFade 1.2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.camp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+	
+.section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-left: 6px solid 	#921AFF;
+  padding-left: 12px;
+}
+
+.section p {
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.character-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.character-img {
+  height: 240px;
+  background: #ddd;
+}
+
+.character-info {
+  padding: 20px;
+}
+
+.character-info h3 {
+  margin: 0 0 10px;
+}
+
+.character-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.character-img {
+    width: 100%;       
+    height: 250px;     
+    overflow: hidden; 
+}
+
+.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+	.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; 
+}
+	.character-img {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.poem {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+}
+
+
+.character-card:hover .poem {
+  opacity: 1;
+  transform: translateY(0);
+}
+	@keyframes heroFade {
+  to { opacity: 1; }
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  z-index: 999;
+  transition: 0.3s;
+}
+
+#music-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+	
+
+@media (max-width: 768px) {
+
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+  
+ <audio id="bgm" loop>
+  <source src="儒門龍首(疏樓龍宿新角色曲) 曲_編曲：黃建秦.mp3" type="audio/mpeg">
+</audio>
+
+
+  
+  <div class="navbar">
+    ...
+  </div>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="camp-hero">
+  <h1>儒 門</h1>
+</div>
+	
+<div id="music-btn">🔇 點我播放音樂</div>
+<script>
+  const bgm = document.getElementById("bgm");
+  const musicBtn = document.getElementById("music-btn");
+
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", function () {
+    if (!isPlaying) {
+      bgm.volume = 0.4;
+      bgm.play().then(() => {
+        musicBtn.textContent = "🔊 音樂播放中";
+        isPlaying = true;
+      }).catch(err => {
+        console.log("播放失敗：", err);
+      });
+    } else {
+      bgm.pause();
+      musicBtn.textContent = "🔇 點我播放音樂";
+      isPlaying = false;
+    }
+  });
+</script>
+	
+
+<div class="section">
+  <h2>陣營理念</h2>
+  <p>
+  儒門思想以仁為本，講究仁義禮智信等孔孟思想，以詩書禮教傳於天下，並以仁義律己律人。<br/>行事為君子之風，以理服人，並以儒風永存於世。
+	
+  </p>
+</div>
+
+
+<div class="section">
+  <h2>代表人物</h2>
+
+  <div class="character-list">
+    <div class="character-card">
+      <div class="character-img">
+        
+        <img src="儒/pw01639.jpg" alt="疏樓龍宿">
+	 <div class="poem">
+    華陽初上鴻門紅，疏樓更迭，龍鱗不減風采
+	<br/> 紫金簫，白玉琴
+	<br/>宮燈夜明曇華正盛， 共飲逍遙一世悠然。
+	
+  </div>
+      </div>
+      <div class="character-info">
+        <h3>疏樓龍宿</h3>
+        <p>儒門第一龍首，也是三教先天，機敏好辯，極為自信，過著逍遙自在的隱居生活。但其作為卻是顛覆儒家傳統的形象，雖談笑風生，卻是隱隱透出堅決果斷的冷酷，因摯友劍子仙跡而再度步入中原，解救蒼生。
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+     <div class="character-img">
+  <img src="儒/pw01535_玉離經 (1).jpg" alt="玉離經">
+		 	 <div class="poem">
+離一己之知，經萬眾之義，
+<br/>辨古今之思，志聖賢之期。
+  </div>
+</div>
+      <div class="character-info">
+        <h3>玉離經</h3>
+        <p>現今德風古道之主，在應無騫死後被眾人推崇接掌儒門，應外和內。玉離經性格開明大器，文雅從容，有一門之主的氣度華貴，但不過分自傲或自謙。待人較為和順輕鬆，但心思縝密，深謀遠慮，看待正事則嚴肅審慎。
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <div class="character-img">
+	  <img src="儒/468359366_10160139103206916_5789032038652075964_n.jpg" alt="飄渺月">
+	<div class="poem">
+江水千映，殘月雙分，袖轉流光影重。
+<br/>憑濤蕩興，恃夜抒狂，劍引穹華傾峰。
+  </div>
+</div>
+      <div class="character-info">
+        <h3>飄渺月</h3>
+        <p>三足天之一的儒門代表，也是三足天中唯一的女性，手持書卷，代表經典為「論語」。自視甚高、自戀、難以相處，且說話較為直接且冰冷，散發出孤高的修者格調。
+
+</p>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
+

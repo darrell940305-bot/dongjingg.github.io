@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>霹靂收藏館｜戲偶｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.hero {
+  height: 40vh;
+  background-image: url("商品/主視覺.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+}
+.hero h1 {
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.product-nav {
+  position: sticky;
+  top: 80px; 
+  background: rgba(91,0,174,0.95);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  z-index: 50;
+}
+.product-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.product-nav a:hover {
+  background: #7C2FF7;
+}
+
+
+.product-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px auto;
+}
+
+.product-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  border-left: 6px solid #5B00AE;
+  padding-left: 12px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+.product-card img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #5B00AE;
+}
+.product-info .poem {
+  font-style: italic;
+  color: #7C2FF7;
+  margin: 6px 0;
+}
+.product-info .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  margin: 6px 0;
+}
+.product-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.product-section {
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 768px) {
+@media (max-width: 768px) {
+
+  
+  .product-card {
+    flex-direction: column;
+  }
+
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .product-nav {
+    display: none;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>霹靂兵器</h1>
+</div>
+
+
+<div class="product-nav">
+  <a href="#premium">偶用兵器</a>
+  <a href="#story">娃類兵器</a>
+  <a href="#others">其他</a>
+ 
+</div>
+
+
+<div class="product-section" id="premium">
+  <h2>精品偶</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/劫之道.jpg" alt="劫之道">
+      <div class="product-info">
+        <h3>現貨】偶用兵器-劫之道 (天劍非天)</h3>
+        <div class="poem">「千年只一現，一劍狂千年。」</div>
+        <div class="price">NT$17,000</div>
+        <p>商品規格：約長96ｘ寬16cm左右<br/>
+           商品材質：PC、ABS、金屬飾品、聚乙烯<br/>
+           商品內容：偶用配件-劫之道乙把、偶用兵器官方認證卡乙張(含發行ID編號)<br/>
+           商品包裝：偶兵專用紙箱
+</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="商品/佛牒.jpg" alt="佛牒">
+      <div class="product-info">
+        <h3>【現貨】霹靂偶用兵器《佛牒》(驚濤版)</h3>
+        <div class="poem">「殺生為護生、斬業非斬人。」</div>
+        <div class="price">NT$13,500</div>
+        <p>商品規格：約長58.5cm  x最寬10.5cm<br/> 
+           商品材質：PC、ABS、金屬飾品、聚乙烯<br/>
+           商品內容：偶用兵器-佛牒乙把(含劍+劍鞘)、偶用配件官方認證卡乙張(含發行ID編號)<br/>
+           商品包裝：偶兵專用紙箱
+</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/軒昂劍龕.jpg" alt="軒昂劍龕">
+      <div class="product-info">
+        <h3>【現貨】偶用兵器-軒昂劍龕 (劍謫仙)</h3>
+        <div class="poem">「倚空絕壁，秋水凌雲尺，天地一笑無用，道與劍，幾時極。傲霜慣北枝，荷醒擎雨時，試問謫仙何處，恆山外，遠煙碧。」</div>
+        <div class="price">NT$12,750</div>
+        <p>商品規格：約長55cmx最寬9cm<br/>
+           商品材質：PC塑膠、ABS塑膠、金屬飾品、聚乙烯<br/>
+           商品內容：偶用兵器-【軒昂劍龕】乙把、偶用兵器官方認證卡乙張(含發行ID編號)<br/>
+註：劍身刷舊為手工藝處理，故每一把皆有些許不同。
+
+		</p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/純陽破軍.jpg" alt="純陽破軍">
+      <div class="product-info">
+        <h3>【現貨】霹靂偶用兵器-倦收天【純陽破軍】</h3>
+        <div class="poem">「江天一色無纖塵，魚龍潛躍觀道身。 天人焉有兩般義？道不虛行只在人。」</div>
+        <div class="price">NT$53,000</div>
+        <p>商品規格：約長76cmx最寬8cm<br/>
+           商品材質：PC、ABS、金屬飾品、聚乙烯<br/>
+           商品內容：偶用兵器-純陽破軍乙把(劍+劍鞘)、偶用兵器官方認證卡乙張(含發行ID編號)<br/></p>
+      </div>
+</div>
+
+<div class="product-section" id="story">
+  <h2>娃類兵器</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/白玉琴.jpg" alt="白玉琴">
+      <div class="product-info">
+        <h3>霹靂娃類武器訂制模型【白玉琴】(疏樓龍宿)</h3>
+
+        <div class="poem">「華陽初上鴻門紅，疏樓更迭，龍鱗不減風采； 紫金簫，白玉琴，宮燈夜明曇華正盛， 共飲逍遙一世悠然。」</div>
+        <div class="price">NT$1,800</div>
+        <p>商品尺寸：長約18 x 5cm
+		<br/>質：PVC、金屬</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/嘸狗利.jpg" alt="嘸狗利">
+      <div class="product-info">
+        <h3>霹靂娃類武器訂制模型【嘸狗利】(北狗最光陰)</h3>
+
+        <div class="poem">「蹉跎錯，消磨過，最是光陰化浮沫。」</div>
+        <div class="price">NT$6,300</div>
+        <p>商品尺寸：約長41cm
+		<br/>商品材質：PVC、金屬</p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/綺羅生劇中琴.jpg" alt="綺羅生劇中琴">
+      <div class="product-info">
+        <h3>【現貨】霹靂娃類武器訂制模型【綺羅生劇中琴】</h3>
+
+        <div class="poem">「百代繁華一朝都，誰非過客； 千秋明月吹角寒，花是主人。」</div>
+        <div class="price">NT$3,200</div>
+        <p>商品尺寸：約26x6.2x4.5cm
+		<br/>商品材質：PVC、金屬</p>
+      </div>
+		   
+	</div>
+	<div class="product-card">
+      <img src="商品/忽雷琴.jpg" alt="忽雷琴">
+      <div class="product-info">
+        <h3>【現貨】霹靂娃類武器訂制模型【忽雷琴】(槐破夢)</h3>
+
+        <div class="poem">「遠風兮，飄搖故土，一年聲，三年破夢。 定目兮，撥絃夭夭，數裂帛，吁嘆命薄。」</div>
+        <div class="price">NT$3,000</div>
+        <p>長度：約21x10cm
+		<br/>材質：PVC、金屬
+</p>
+      </div>
+		</div>
+	<div class="product-card">
+      <img src="商品/佛牒.jpg" alt="佛牒">
+      <div class="product-info">
+        <h3>【現貨】霹靂娃類武器訂制模型【佛牒】(佛劍分說)</h3>
+
+        <div class="poem">「殺生為護生、斬業非斬人。」</div>
+        <div class="price">NT$2,400</div>
+        <p>商品尺寸：長約24.8cm
+		<br/>商品材質：PVC、金屬</p>
+      </div>	   
+</div>
+
+
+
+<div class="product-section" id="others">
+  <h2>其他</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/滄耳刀.jpg" alt="滄耳刀">
+      <div class="product-info">
+        <h3>[OUTLET] 『PILI CUTE』絨毛兵器吊飾-滄耳刀 (素還真)</h3>
+        <div class="poem">「超卡哇依登場，是小兵器也是小吊飾，放鬆緊張的步調，Q萌一下吧！」</div>
+        <div class="price">NT$632</div>
+        <p>商品規格：約7*20*3.8公分<br/>
+           商品材質：絨毛、棉花、合金、pvc、配件：鑰匙扣<br/>
+           商品包裝：PP盒+背卡<br/>
+           包裝規格：約7*21.5*5.5公分<br/>
+           商品重量：約45g(含包裝)</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/絨毛兵器.jpg" alt="絨毛兵器">
+      <div class="product-info">
+        <h3>[OUTLET]『PILI CUTE』絨毛兵器吊飾-嘸狗利 (最光陰)</h3>
+        <div class="poem">「超卡哇依登場，是小兵器也是小吊飾，放鬆緊張的步調，Q萌一下吧！」</div>
+        <div class="price">NT$632</div>
+        <p>商品規格：約7*20*3.8公分<br/>
+           商品材質：絨毛、棉花、合金、pvc、配件：鑰匙扣<br/>
+           商品包裝：PP盒+背卡<br/>
+           包裝規格：約7*21.5*5.5公分<br/>
+           商品重量：約45g(含包裝)。</p>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+

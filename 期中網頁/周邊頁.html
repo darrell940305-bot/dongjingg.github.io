@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>霹靂收藏館｜戲偶｜PILI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.hero {
+  height: 40vh;
+  background-image: url("商品/主視覺.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+}
+.hero h1 {
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.product-nav {
+  position: sticky;
+  top: 80px; 
+  background: rgba(91,0,174,0.95);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  z-index: 50;
+}
+.product-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.product-nav a:hover {
+  background: #7C2FF7;
+}
+
+
+.product-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px auto;
+}
+
+.product-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  border-left: 6px solid #5B00AE;
+  padding-left: 12px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+.product-card img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #5B00AE;
+}
+.product-info .poem {
+  font-style: italic;
+  color: #7C2FF7;
+  margin: 6px 0;
+}
+.product-info .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  margin: 6px 0;
+}
+.product-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.product-section {
+  scroll-margin-top: 140px;
+}
+@media (max-width: 768px) {
+
+
+  .product-card {
+    flex-direction: column;
+  }
+
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+ 
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .product-nav {
+    display: none;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+}
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>周邊好禮</h1>
+</div>
+
+
+<div class="product-nav">
+  <a href="#premium">酷卡書籤</a>
+  <a href="#story">胸章別針</a>
+  <a href="#palm">盲抽好物</a>
+  <a href="#others">其他</a>
+</div>
+
+
+<div class="product-section" id="premium">
+  <h2>酷卡書籤</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/兵濤.jpg" alt="兵濤">
+      <div class="product-info">
+        <h3>【霹靂兵濤】劇集Postcard套組</h3>
+        <div class="poem">「疏樓龍宿、風之痕、白衣劍少、黑衣劍少、森墨君、白城輿、知北遊、影法師」</div>
+        <div class="price">NT$240</div>
+        <p>
+商品規格/8張/套，約12.5x17.5cm/張 <br/>
+包裝尺寸/12.5x17.5cm，OPP袋包裝<br/>
+商品內容/信片8入<br/>
+卡紙 / 高品質紙樣，無瑕紋理，更能呈現光澤亮麗、立體飽和的印刷層次感。<br/>
+商品重量/60g(含包裝)<br/>
+		  </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="商品/三先天.jpg" alt="三先天">
+      <div class="product-info">
+        <h3>霹靂HANAFUDA典藏Postcard套組-三先天</h3>
+        <div class="poem">「疏樓龍宿、劍子仙跡、佛劍分說 + 2024三教頂峰20週年紀念標準字」</div>
+        <div class="price">NT$240</div>
+        <p>
+商品規格/約15x20cm/張<br/>
+包裝尺寸/約23x17cm，特製信封裝，外包OPP袋<br/>
+特殊印製/亮面+特殊燙金，視覺上呈現微立體感<br/>
+商品內容/明信片4入、外信封1入<br/>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/鐳射票.jpg" alt="鐳射票">
+      <div class="product-info">
+        <h3>玄英朗逸鐳射票(台規版)</h3>
+        <div class="poem">「最光陰、劍謫仙、翠蘿寒、倦收天」</div>
+        <div class="price">NT$350</div>
+        <p>
+商品規格/約18x6cm<br/>
+每組8入，四款角色各2入，雙面同圖<br/>
+包裝規格/約18x6cm，8入，OPP袋<br/>
+包裝重量/約43g<br/>
+材質/卡紙<br/>
+		</p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/恆山精神.jpg" alt="恆山精神">
+      <div class="product-info">
+        <h3>霹靂立體Postcard-恆山精神(劍謫仙+劍風雲)</h3>
+        <div class="poem">「內附前景框、人物框、背景框三張，搭配四邊紙卡榫，以組裝方式來完成的小型紙劇場！細緻並立體的呈現人物風采！」</div>
+        <div class="price">NT$150</div>
+        <p>
+商品材質/卡紙<br/>
+商品尺寸/約12.5*17.5CM<br/>
+商品重量/約30g<br/>
+商品內容/明信片三張、紙卡榫四張<br/></p>
+      </div>
+</div>
+
+<div class="product-section" id="story">
+  <h2>胸章別針</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/磨砂.jpg" alt="磨砂">
+      <div class="product-info">
+        <h3>[OUTLET]【盲抽】『霹靂無敵』方型磨砂胸章－第二彈(100入全套盒裝)</h3>
+        <div class="poem">「紀念胸章100入，內含有一個隱藏版燙金胸章，(整箱可完整蒐集1整套胸章)」</div>
+        <div class="price">NT$4,450</div>
+        <p>
+商品材質/塑膠、馬口鐵<br/>
+商品尺寸/4*6公分/個<br/>
+商品包裝尺寸/長20*寬25*高15公分<br/>
+商品產地/台灣<br/></p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/紀念胸章.jpg" alt="紀念胸章">
+      <div class="product-info">
+        <h3>[OUTLET] Postcard紀念胸章組-蝶龍款</h3>
+
+        <div class="poem">「精美星幻明信片印刷，經典方形角色胸章一次收藏。」</div>
+        <div class="price">NT$368</div>
+        <p>
+商品內容/紀念明信片乙張、紀念角色胸章 (6個)<br/>
+商品尺寸/明信片17.5x12.5cm、胸章11.5x3.7cm<br/>
+商品材質/紙、白鐵<br/></p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/點漆徽章.jpg" alt="點漆徽章">
+      <div class="product-info">
+        <h3>[OUTLET]霹靂甄彩點漆徽章-疏樓龍宿</h3>
+
+        <div class="poem">「金屬徽章閃亮變身！銅質徽章配合點漆工藝，帶來前所未有的特殊質感。Q俠傳角色全新蛻變，沒有偶照也可以很酷炫！」</div>
+        <div class="price">NT$232</div>
+        <p> 
+商品規格/一款2個，約3.5×3.5 cm<br/>
+外包裝規格/半開窗馬口鐵盒，約6.5×9.5×2 cm<br/>
+材質/金屬銅製<br/>
+</p>
+      </div>
+		   
+	</div>
+	<div class="product-card">
+      <img src="商品/月絨胸章.jpg" alt=" 月絨胸章">
+      <div class="product-info">
+        <h3>[OUTLET] 月絨胸章MAX-末世之豔</h3>
+
+        <div class="poem">「收藏用超大胸章，表面是絲絨膜的仿絨毛觸感，色感精緻飽和，除了胸章別針功能，背後也有可供站立擺飾的輔助立架。」</div>
+        <div class="price">NT$240</div>
+        <p>
+商品材質/PVC塑膠、馬口鐵<br/>
+商品尺寸/直徑約16cm<br/>
+商品包裝/OPP袋<br/>
+包裝尺寸/約17x17cm<br/></p>
+      </div>
+		</div>
+	<div class="product-card">
+      <img src="商品/紀忘憂.jpg" alt="紀忘憂">
+      <div class="product-info">
+        <h3>[OUTLET] 燙金Postcard紀念胸章組-紀忘憂</h3>
+
+        <div class="poem">「燙金Postcard紀念胸章組-紀忘憂」</div>
+        <div class="price">NT$128</div>
+        <p>
+商品包裝/PP袋<br/>
+商品材質/金鑽卡+白鐵胸章<br/>
+商品尺寸/信片：17.5x12.5cm、胸章直徑：7.5cm	<br/>
+</p>
+      </div>	   
+</div>
+
+<div class="product-section" id="palm">
+  <h2>盲抽好物</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/克洛塔.jpg" alt="克洛塔">
+      <div class="product-info">
+        <h3>【盲抽】霹靂克洛塔 (單抽)</h3>
+        <div class="poem">「壓克力吊飾，亦可當成擺飾。霹靂克洛塔共收錄18名霹靂英雄，包含2款隱藏版角色，每盒內會出2款隱藏版。」</div>
+        <div class="price">NT$230</div>
+        <p>
+盒裝販售，一盒25入，必有16名角色+2名隱藏版角色，其餘隨機7名角色。<br/>
+商品規格/約5.6x7x0.8cm/個<br/>
+商品材質/壓克力<br/>
+包裝規格/約34x5.5x9.2cm、紙盒
+</p>
+      </div>
+    </div>
+	  <div class="product-card">
+      <img src="商品/DVD.jpg" alt="霹靂十二吋戲偶【素還真-電影正裝版】">
+      <div class="product-info">
+        <h3>【盲抽】PILI晶透DVD吊飾集抽包</h3>
+        <div class="poem">「懷舊小週邊，劇集DVD縮小變身成為可愛小掛件，記憶中的經典橋段，霹靂英雄的回憶傳說；可以掛在書桌前、包包上、或是當作週邊擺飾。」</div>
+        <div class="price">NT$180</div>
+        <p>
+✦清除保護膜建議方法：<br/>
+• 從壓克力的其中一個邊緣，找到保護膜的起點，慢慢地將膜從邊緣掀起。或使用塑膠尺從邊緣輕輕推刮，將保護膜推起來，即可完全撕下。<br/>
+• 撕膜時請動作輕柔，以免刮傷壓克力表面精緻圖層。<br/></p>
+      </div>
+  </div>
+</div>
+
+<div class="product-section" id="others">
+  <h2>其他</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/杯.jpg" alt="杯">
+      <div class="product-info">
+        <h3>【霹靂英雄活水陶杯】清香白蓮-素還真(氣宇藍)</h3>
+        <div class="poem">「半神半聖亦半仙，全儒全道是全賢； 腦中真書藏萬卷，掌握文武半邊天。」</div>
+        <div class="price">NT$980</div>
+        <p>
+容量/260ml<br/>
+材質/高溫陶<br/>
+規格/杯x1，杯托x1<br/>
+包裝/精緻彩盒包裝<br/>
+外盒尺寸/12x12x12(cm)</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/雨衣.jpg" alt="雨衣">
+      <div class="product-info">
+        <h3>PILI HERO斗蓬雨衣-月無缺(XL號)</h3>
+        <div class="poem">「防虹吸科技雨傘布。」</div>
+        <div class="price">NT$1,280</div>
+        <p>
+商品成分/本體(100%聚酯纖維) • 配件(尼龍、塑料)<br/>
+商品尺寸/XL<br/>
+主體 / 帽高：W152xH112cm / 33cm<br/>
+雨衣重量/300g<br/>
+建議使用者身高/180cm以上</p>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

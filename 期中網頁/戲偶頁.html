@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>霹靂收藏館｜戲偶｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.hero {
+  height: 40vh;
+  background-image: url("商品/主視覺.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+}
+.hero h1 {
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.product-nav {
+  position: sticky;
+  top: 80px; 
+  background: rgba(91,0,174,0.95);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  z-index: 50;
+}
+.product-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.product-nav a:hover {
+  background: #7C2FF7;
+}
+
+
+.product-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px auto;
+}
+
+.product-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  border-left: 6px solid #5B00AE;
+  padding-left: 12px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+.product-card img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #5B00AE;
+}
+.product-info .poem {
+  font-style: italic;
+  color: #7C2FF7;
+  margin: 6px 0;
+}
+.product-info .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  margin: 6px 0;
+}
+.product-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.product-section {
+  scroll-margin-top: 140px;
+}
+@media (max-width: 768px) {
+.product-card {
+    flex-direction: column;
+  }
+
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+ 
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .product-nav {
+    display: none;
+  }
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+}
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>戲偶收藏</h1>
+</div>
+
+
+<div class="product-nav">
+  <a href="#premium">精品偶</a>
+  <a href="#story">人形物語</a>
+  <a href="#palm">掌中戲偶</a>
+  <a href="#others">其他</a>
+</div>
+
+
+<div class="product-section" id="premium">
+  <h2>精品偶</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/年幾何.jpg" alt="年幾何">
+      <div class="product-info">
+        <h3>年幾何</h3>
+        <div class="poem">「百年生死不敢問，一朝聞道可殞身。」</div>
+        <div class="price">NT$56,000</div>
+        <p>黑籠的領導者，也是修關者中的天才，因數次保護著黑籠，被黑籠的居民尊稱為「壤父」，個性冷情疏離。因修『禁道』所以長年眼不開，嘴不張，更是人族聖皇妲眸姬的師尊。更嘗試著將已經散佚的靈氣尋找回來，為這方生靈尋找生機。</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="商品/劍謫仙.jpg" alt="劍謫仙">
+      <div class="product-info">
+        <h3>劍謫仙</h3>
+        <div class="poem">「倚空絕壁，秋水凌雲尺，天地一笑無用，道與劍，幾時極。 傲霜慣北枝，荷醒擎雨時，試問謫仙何處，恆山外，遠煙碧。」</div>
+        <div class="price">NT$58,000</div>
+        <p>仙風道骨，宛如天上謫仙人一般的劍中仙，超然物外，冷傲觀世，舉手投足充滿絕對的自信，卻又不會鋒芒畢露。曾調查苦境隱藏的數樁神秘災禍，久遠前留下靖玄錄計畫後，交由月琴老人代為集結天命者——靖玄客，劍謫仙則因故進入涅槃之境，行蹤成謎。</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/太玄封羲.jpg" alt="太玄封羲">
+      <div class="product-info">
+        <h3>太玄封羲</h3>
+        <div class="poem">「天覆人，地載子，極目遙岑定浩蕩。放百年，封五絃，遊心太玄絕癲狂。」</div>
+        <div class="price">NT$58,000</div>
+        <p>六蝕玄曜之天相，靜濤君的師尊，為人驕傲自負，氣質脫塵絕俗而盛氣凌人，凡事掌握手中，滿懷心機，除在有興趣的事物以外，其餘皆漠然以待，淡然處世。在取得寰界之力後，意圖顛覆道門。
+		</p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/談無慾.jpg" alt="談無慾">
+      <div class="product-info">
+        <h3>談無慾</h3>
+        <div class="poem">「真神真聖亦真仙，通儒通道是通賢； 腦中玄機用不盡，統轄文武半邊天。」</div>
+        <div class="price">NT$53,000</div>
+        <p>身為日月星三才子之月才子，談無慾呈現出與素還真全然不同的作風與個性，這點由他的詩號可窺知一二，完全的自信促使他一出道便和素還真在檯面下互相較勁，兩人維持著亦敵亦友的關係。由於過度的驕矜自滿與好勝，讓談無慾墜入深淵，至此一蹶不振；然淨從穢生、明從闇出，沉潛再出的談無慾，蛻化為六醜暗助正道，並重拾昔日統轄文武半邊天的風采，共同戮力於武林和平。</p>
+      </div>
+</div>
+
+<div class="product-section" id="story">
+  <h2>人形物語</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/劍風雲.jpg" alt="劍風雲">
+      <div class="product-info">
+        <h3>劍風雲</h3>
+
+        <div class="poem">「齊天詩酒，自有謫仙丰神。萬卷星電，獨擁碧霄雲深。」</div>
+        <div class="price">NT$28,500</div>
+        <p>風雲兒脫胎換骨後，承接恆山之號，以恆山劍風雲的身份行走武林。個性比之過去，多了幾分歷經滄桑的沉穩，謹守純善護世之心。為尋找與劍謫仙相關的淵源，消失武林多時。但在武林再度出現新神秘之後，繼承琴狐、占雲巾、天扇子意志的風雲兒，以恆山劍風雲之名，再入江湖，協助劍謫仙之好友玉龍隱士。</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/月無缺.jpg" alt="月無缺">
+      <div class="product-info">
+        <h3>月無缺</h3>
+
+        <div class="poem">「玉川之水流潺潺，古來飲者似神仙。放眼天下百千事，無缺，再聽徽外兩三弦。」</div>
+        <div class="price">NT$30,000</div>
+        <p>武林隱世傳奇之一，修為不下劍謫仙。久遠前曾是中道真之主，與道真一脈有所淵源，並曾以不同的身份，在武林留下無數的傳說，而今才要一一揭曉。月無缺居於玉川仙境，氣質風雅，個性卻傲氣冰冷，性喜吞雲吐霧，善書泥金，琴藝絕世。他對絕大部分之人，宛如難以親近的冰山，更不時展露危險感。唯獨對劍謫仙相關之事十分在乎，兩人之間，似有不為人知的隱情。隨著恆山劍風雲入世，面對劍謫仙的傳人，月無缺也將引動風雲，再啟傳奇。</p>
+      </div>
+  </div>
+	   <div class="product-card">
+      <img src="商品/小劍謫仙.jpg" alt="劍謫仙">
+      <div class="product-info">
+        <h3>劍謫仙</h3>
+
+        <div class="poem">「齊天詩酒，自有謫仙丰神，萬卷星電，獨擁碧霄雲深。」</div>
+        <div class="price">NT$31,800</div>
+        <p>仙風道骨，宛如天上謫仙人一般的劍中仙，超然物外，冷傲觀世，舉手投足充滿絕對的自信，卻又不會鋒芒畢露。曾調查苦境隱藏的數樁神秘災禍，久遠前留下靖玄錄計畫後，交由月琴老人代為集結天命者——靖玄客，劍謫仙則因故進入涅槃之境，行蹤成謎。</p>
+      </div>
+		   
+	</div>
+	<div class="product-card">
+      <img src="商品/君奉天.jpg" alt="君奉天">
+      <div class="product-info">
+        <h3>君奉天</h3>
+
+        <div class="poem">「江聲嶽色， 萬仞崢嶸劍長歌， 青冥浩蕩， 天涯孤舠盡折蒿， 雲闢千層巔， 還看一山高。」</div>
+        <div class="price">NT$32,000</div>
+        <p>儒門劍客宗師，劍法造詣頂尖，為墨傾池、玉離經等人的前輩，尊號「法儒無私」。身揹剛正法劍，手托至衡律典，個性耿直，剛正不阿，不容任何邪惡之事，正氣凜然，原則為上。原在德風古道的昊正五道內守關，因單鋒罪者一案再掀儒門風波，受玉離經攜眾請託，現身援助。君奉天出自雲海仙門，乃九天玄尊與鬼后魙天下之子，雲海仙門的正統繼承人。</p>
+      </div>
+		</div>
+	<div class="product-card">
+      <img src="商品/玉逍遙.jpg" alt="玉逍遙">
+      <div class="product-info">
+        <h3>玉逍遙</h3>
+
+        <div class="poem">「仙衣眠雲碧嵐袍，一襟瀟灑，兩袖飄飄。玉墨舒心春醞瓢，行也逍遙，坐也逍遙。」</div>
+        <div class="price">NT$32,000</div>
+        <p>雲海仙門的大師兄，幽默風趣、好笑語，年紀輕輕即出類拔萃，修為已是頂尖，與君奉天追查鬼麒主下落多年，誓要嚴懲血河戰役元凶。</p>
+      </div>	   
+</div>
+
+<div class="product-section" id="palm">
+  <h2>掌中戲偶</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/素還真01.jpg" alt="霹靂十二吋戲偶【素還真-異數版】">
+      <div class="product-info">
+        <h3>霹靂十二吋戲偶【素還真-異數版】</h3>
+        <div class="poem">「小巧玲瓏，手中有戲」</div>
+        <div class="price">NT$2,580</div>
+        <p>十二吋-依實際比例縮小製作依照實際戲偶比例縮小製作，寫實傳神的偶頭臉形， 特別講究的服裝配件，創新技術的植髮工藝，嚴加謹慎的製作品質， 將最具台灣意象的霹靂布袋戲偶完美呈現。</p>
+      </div>
+    </div>
+	  <div class="product-card">
+      <img src="商品/素還真02.jpg" alt="霹靂十二吋戲偶【素還真-電影正裝版】">
+      <div class="product-info">
+        <h3>霹靂十二吋戲偶【素還真-電影正裝版】</h3>
+        <div class="poem">「小巧玲瓏，手中有戲」</div>
+        <div class="price">NT$2,580</div>
+        <p>掌中戲約十二吋(高約35cm)的掌中大小設計， 
+運用單手就可輕易的操作，讓您也能享受操偶文化技藝的樂趣。</p>
+      </div>
+  </div>
+</div>
+
+<div class="product-section" id="others">
+  <h2>其他</h2>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="商品/解璇璣.jpg" alt="解璇璣">
+      <div class="product-info">
+        <h3>【現貨】霹靂朝暮依依棉花公仔-解璇璣(全套)</h3>
+        <div class="poem">「雲霓晻翳，參辰顛倒。日月迷兮分殊道。問道，問道，流星指天長翱。」</div>
+        <div class="price">NT$2,490</div>
+        <p>棉花娃解璇璣乙隻-全套(裸娃+娃衣+出生卡)</p>
+      </div>
+    </div>
+	   <div class="product-card">
+      <img src="商品/綺羅生.jpg" alt="綺羅生">
+      <div class="product-info">
+        <h3>【霹靂人形物語】Q寶娃-綺羅生</h3>
+        <div class="poem">「雲霓晻翳，參辰顛倒。日月迷兮分殊道。問道，問道，流星指天長翱。」</div>
+        <div class="price">NT$5,900</div>
+        <p>奇花八部中的獸花，同時也是武道內七修之一，擅使刀，名號江山快手。貌美如玉，聲音溫潤如清風拂耳，全身雪白，耳尖長有珊瑚角，以江中畫舫為居。在多年前刀法大成時，便步出叫喚淵藪，挑戰天下；後卻因一樁武林舊怨而封刀，自此改以射箭為用。</p>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+

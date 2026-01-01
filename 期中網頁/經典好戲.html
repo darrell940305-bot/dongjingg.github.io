@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>經典好戲｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="classic.css">
+<style>	
+body {
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  background: #000;
+  color: #e0e0e0;
+}
+
+.classic-hero {
+  height: 80vh;
+  background: radial-gradient(circle at center, #222, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 6px;
+}
+
+.classic-hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.classic-hero p {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.drama-section {
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  gap: 80px;
+}
+
+.drama-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.drama-image {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.drama-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.drama-image:hover img {
+  transform: scale(1.05);
+}
+
+.quote {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.drama-image:hover .quote {
+  opacity: 1;
+}
+
+.drama-info {
+  width: 50%;
+}
+
+.drama-info h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.drama-info span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.drama-info p {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.drama-info a {
+  color: #cfae70;
+  text-decoration: none;
+  border-bottom: 1px solid #cfae70;
+  padding-bottom: 4px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu a:hover {
+  color: #cfae70;
+}
+
+.classic-hero {
+  padding-top: 80px;
+}
+
+.drama-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s ease;
+}
+
+.drama-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .classic-hero {
+    height: 50vh;
+    letter-spacing: 3px;
+  }
+
+  .classic-hero h1 {
+    font-size: 32px;
+  }
+
+  .classic-hero p {
+    font-size: 14px;
+  }
+
+  .drama-section,
+  .drama-section.reverse {
+    flex-direction: column;
+    padding: 60px 8%;
+    gap: 30px;
+  }
+
+
+  .drama-image,
+  .drama-info {
+    width: 100%;
+  }
+
+ 
+  .quote {
+    opacity: 1;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .drama-info h2 {
+    font-size: 24px;
+  }
+
+  .drama-info span {
+    font-size: 12px;
+  }
+
+  .drama-info p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .drama-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: 1px solid #cfae70;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<section class="classic-hero">
+  <h1>經 典 好 戲</h1>
+  <p>一頁風雲，千秋江湖</p>
+</section>
+
+
+<section class="drama-section">
+  <div class="drama-image">
+    <img src="經典/九皇座.jpg" alt="霹靂九皇座">
+    <div class="quote">「殺生為護生,斬業非斬人」</div>
+  </div>
+  <div class="drama-info">
+    <h2>霹靂九皇座</h2>
+    <span>2003｜50 集</span>
+    <p>
+天外浮艫現．破鬼樓，玄空應血劫．災殃臨、禍中原<br/>
+武痴、邪帝傳人會。<br/>
+九皇座、龍騰九天，毀滅之源、誰能消弭？
+    </p>
+    <a href="https://www.youtube.com/watch?v=C0U6mXg09vw&list=PL2CEFDE052B53FDE3&index=11" target="_blank">
+  查看經典片段
+</a>
+
+  </div>
+</section>
+
+
+<section class="drama-section reverse">
+  <div class="drama-image">
+    <img src="經典/劍蹤.jpg" alt="霹靂劍蹤">
+    <div class="quote">坐下！<br/><br/>
+陪我喝酒。<br/><br/>
+吾不喝酒。<br/><br/>
+那就減去喝酒兩字。<br/><br/>
+陪你喝酒，減去喝酒。你要人陪</div>
+  </div>
+  <div class="drama-info">
+    <h2>霹靂劍蹤</h2>
+    <span>2005｜30 集</span>
+    <p>
+      一個尋找過去的人、一個追求未來的人、 一個維繫著彼此的名字。<br/> 狂陽不落，在蝴蝶飛舞之中，又是一頁刀劍的傳說。
+    </p>
+    <a href="https://www.youtube.com/watch?v=kAdx39LlFSA&list=PL2D65E6E44A1C630B&index=26" target="_blank">
+  查看經典片段
+</a>
+  </div>
+	
+</section>
+	<section class="drama-section">
+  <div class="drama-image">
+    <img src="經典/驚濤.jpg" alt="霹靂驚濤">
+    <div class="quote">:如果人間是苦，活著的意義又為何?<br/>這個答案不急，半年後，老衲再回答你。<br/><br/>這半年過去，佛域上下，待你如何?<br/>:他們待我很好。<br/>那你還認為人間是苦嗎?<br/><br/>不是人間苦，而是你的心苦，斬斷你心苦便是意義。<br/>你，受苦了。<br/>
+	  </div>
+  </div>
+  <div class="drama-info">
+    <h2>霹靂驚濤</h2>
+    <span>2018｜42 集</span>
+    <p>
+末日終章，最終聖戰，為消滅厄禍之初，一頁書完全激發血闇之能，成就近神之威，八歧邪神，百世經綸，無間地獄上的對決，空前霹靂。<br/>
+八歧邪神釋放邪氣，遍及神州武林，邪染無數蒼生，天下之劫，誰能解除？<br/>
+鬼獄女帝，不入輪迴．魙天下出關在即，鬼獄全面侵略，西煌佛界勢必首當其衝，護生斬業聖行者，能否再現塵寰，力挽狂瀾？<br/>
+    </p>
+    <a href="https://www.youtube.com/watch?v=3LpDgIH6LKM" target="_blank">
+  查看經典片段
+</a>
+
+  </div>
+		
+</section>
+<section class="drama-section reverse">
+  <div class="drama-image">
+    <img src="經典/霹靂兵鋒決.jpg" alt="霹靂兵鋒決">
+    <div class="quote">
+		很好、很好，無缺沒事了就好<br/>
+		那接下來，就是吾與你們之間的事了。<br/><br/>
+	    今日吾便代天讓你們見識，何謂恆山精神!
+	  </div>
+  </div>
+  <div class="drama-info">
+    <h2>霹靂兵鋒決</h2>
+    <span>2020｜46 集</span>
+    <p>
+人、劍、戰火，交織一部江湖的歷史<br/>
+何為天火？孰是五奇？武林之秘，誰人可解？<br/> 猂殃劍瘟，殺戮兵禍；天下之亂，救贖何在？<br/>
+雙月爭輝，各領風騷；劍者癒者，天道殊途。<br/>
+    </p>
+    <a href="https://www.youtube.com/watch?v=lK-Lt7aHpV8&list=PLcagVSpPYJdMjuxkroL7tCJrKtijg-3LZ&index=23" target="_blank">
+  查看經典片段
+</a>
+  </div>
+	
+	
+	</section>
+	<section class="drama-section">
+  <div class="drama-image">
+    <img src="經典/霹靂戰魔策.jpg" alt="霹靂戰魔策">
+    <div class="quote">
+就笑君 起起落落浪捲來 初心今何在<br/>
+才知 顛顛倒倒這世界 誰清明無礙<br/>
+該體會 紛紛擾擾萬千載 不過恨與愛<br/>
+恨與愛 原來都無解。<br/>
+	  </div>
+  </div>
+  <div class="drama-info">
+    <h2>霹靂戰魔策</h2>
+    <span>2021｜40 集</span>
+    <p>
+魔亂天下，劍動武林，隱藏在暗處的祇首魈嶢，秘密串聯各方勢力，行事詭譎，掐準各方勢力的要處，陰謀布局；<br/>而高人應世現龍蹤，隱居放懷冷韻的雲行無常．紀忘憂，悠然旁觀江湖事，卻屢屢在緊要關頭，以匪淺代價巧施援手。<br/>智無第一，武無第二，兩人之鬥，將掀起洶湧波瀾？
+</p>
+    <a href="https://www.youtube.com/watch?v=DAOs4kEnZHo" target="_blank">
+  查看經典片段
+</a>
+
+  </div>
+		
+</section>
+	
+	<script>
+  const sections = document.querySelectorAll(".drama-section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>

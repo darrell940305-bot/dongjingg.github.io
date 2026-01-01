@@ -1,0 +1,364 @@
+<!doctype html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>佛門陣營｜PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  color: #222;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background:#5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.camp-hero {
+  position: relative;
+  height: 70vh;
+	
+  background-image: url("佛/4211d876a23937074eea384b13239ebf.jpg");
+  background-size: cover;
+
+  background-position: center 25%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  animation: heroFade 1.8s ease forwards;
+}
+
+.camp-hero h1 {
+  position: relative;
+  color: #fff;
+  font-size: 64px;
+  letter-spacing: 10px;
+  z-index: 1;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleFade 1.2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.camp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+	
+.section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-left: 6px solid #cfae70;
+  padding-left: 12px;
+}
+
+.section p {
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.character-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.character-img {
+  height: 240px;
+  background: #ddd;
+}
+
+.character-info {
+  padding: 20px;
+}
+
+.character-info h3 {
+  margin: 0 0 10px;
+}
+
+.character-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.character-img {
+    width: 100%;       
+    height: 250px;     
+    overflow: hidden; 
+}
+
+.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+	.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; 
+}
+	.character-img {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.poem {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+}
+
+
+.character-card:hover .poem {
+  opacity: 1;
+  transform: translateY(0);
+}
+	@keyframes heroFade {
+  to { opacity: 1; }
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  z-index: 999;
+  transition: 0.3s;
+}
+
+#music-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+@media (max-width: 768px) {
+
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+
+  .hero,
+  .camp-hero {
+    height: 40vh;
+  }
+
+  .hero h1,
+  .camp-hero h1 {
+    font-size: 28px;
+  }
+
+
+  .category-section,
+  .character-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+}	
+	
+</style>
+</head>
+
+
+<body>
+
+  
+ <audio id="bgm" loop>
+  <source src="荒人邪影MV.mp3" type="audio/mpeg">
+</audio>
+
+
+  
+  <div class="navbar">
+    ...
+  </div>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="期末作業.html">首頁</a>
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="camp-hero">
+  <h1>佛 門</h1>
+</div>
+	
+<div id="music-btn">🔇 點我播放音樂</div>
+<script>
+  const bgm = document.getElementById("bgm");
+  const musicBtn = document.getElementById("music-btn");
+
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", function () {
+    if (!isPlaying) {
+      bgm.volume = 0.4;
+      bgm.play().then(() => {
+        musicBtn.textContent = "🔊 音樂播放中";
+        isPlaying = true;
+      }).catch(err => {
+        console.log("播放失敗：", err);
+      });
+    } else {
+      bgm.pause();
+      musicBtn.textContent = "🔇 點我播放音樂";
+      isPlaying = false;
+    }
+  });
+</script>
+	
+
+<div class="section">
+  <h2>陣營理念</h2>
+  <p>
+    佛門思想以護生與完成自身果業為主，萬千生靈皆有佛性、皆能成佛、得道自身。
+	<br/>
+	哪怕生靈塗炭、末世降臨，佛門中人皆會為此而豁上一切，奉獻己身，拯救眾生。
+  </p>
+</div>
+
+
+<div class="section">
+  <h2>代表人物</h2>
+
+  <div class="character-list">
+    <div class="character-card">
+      <div class="character-img">
+        
+        <img src="佛/156086_12786383990WOW.jpg" alt="一頁書">
+	 <div class="poem">
+    世事如棋，乾坤莫測，笑盡英雄。
+  </div>
+      </div>
+      <div class="character-info">
+        <h3>一頁書</h3>
+        <p>與素還真並列為霹靂的兩大支柱，亦名『梵天』。身懷高深武學修為，法相莊嚴、胸懷無私、正氣凜然。身為佛門高僧，行事作風果決明快、妒惡如仇，鏟奸除惡絕不手軟，為正道的精神指標及領導者之一，與眾不同的百世經綸，半闔眼眸看盡世俗庸人，微揚嘴角笑盡天下英雄。
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+     <div class="character-img">
+  <img src="佛/pw01784.jpg" alt="佛劍分說">
+		 	 <div class="poem">
+    殺生為護生、斬業非斬人
+  </div>
+</div>
+      <div class="character-info">
+        <h3>佛劍分說</h3>
+        <p>體悟佛理，發願斬盡世間一切惡業，墜入無間亦不悔的慈悲佛者。得天佛尊贈與佛牒，開啟艱辛的修行之路，個性剛直不阿、正氣凜然，在見識過滅絕希望的未來世界之後，更加深佛劍堅定的救世之路，縱然逆天之路艱辛難行，亦是不由分說的一人獨行。
+
+</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <div class="character-img">
+	  <img src="佛/90f55625dd84ee9af30a17770ac9d473.jpg" alt="天之佛">
+	<div class="poem">
+ 七情不昧四重恩，八筏常歸十界魂。
+<br/>負業諸塵賢劫渡，無邊水月大千存。
+  </div>
+</div>
+      <div class="character-info">
+        <h3>天之佛</h3>
+        <p>天佛原鄉最高象徵，色身非男非女。對於罪業有高度自覺與自主力，以背負萬罪、萬人血肉砌成懺罪之牆的對抗災厄的罪身佛。因修持法門特殊而擁有極強烈的精神潔癖，亦為主戰一派，決斷俐落，以極端手腕守護蒼生與天佛原鄉。
+</p>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>PILI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f5f3ef;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  background: #5B00AE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu.responsive {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu.responsive a {
+  margin: 10px 0;
+}
+
+
+.hero {
+	 position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("經典/素還真.png");   /* 換成你的圖片路徑 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 60px;
+  opacity: 0.85;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(3px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+.camp-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 80%;
+}
+
+.camp {
+  height: 180px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.05);
+}
+
+
+.camp-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.camp-sub {
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.camp:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-color: #fff;
+}
+
+
+.buddha:hover { background: rgba(255,215,150,0.25); }
+.dao:hover { background: rgba(150,255,200,0.25); }
+.ru:hover { background: rgba(200,200,255,0.25); }
+.evil:hover { background: rgba(255,120,120,0.3); }
+	@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero p {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+	@media (max-width: 768px) {
+  .camp-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    margin-bottom: 40px;
+  }
+}
+
+</style>
+<body>
+
+
+<div class="navbar">
+  <div class="logo">PILI</div>
+  <div class="menu">
+    <a href="商品頁.html">商品</a>
+    <a href="經典好戲.html">經典好戲</a>
+  </div>
+</div>
+
+
+<div class="hero">
+  <h1>霹靂布袋戲</h1>
+  <p>佛・道・儒・邪</p>
+
+  <div class="camp-links">
+    <a href="佛.html" class="camp buddha">
+      <div class="camp-title">佛</div>
+      <div class="camp-sub">慈悲</div>
+    </a>
+
+    <a href="道.html" class="camp dao">
+      <div class="camp-title">道</div>
+      <div class="camp-sub">無為</div>
+    </a>
+
+    <a href="儒.html" class="camp ru">
+      <div class="camp-title">儒</div>
+      <div class="camp-sub">秩序</div>
+    </a>
+
+    <a href="邪.html" class="camp evil">
+      <div class="camp-title">邪</div>
+      <div class="camp-sub">慾望</div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
